@@ -1,3 +1,10 @@
+```yaml
+---
+title: "GWAS-02: Quality control of SNP data"
+output: html_document
+---
+```
+
 # GWAS-02: Quality control of SNP data
 
 ## Table of Contents
@@ -28,7 +35,7 @@ Copy the dataset to your working directory from ```/proj/g2020004/nobackup/tilma
 Unzip the human.tar.gz
 After unzipping the folder, you will have three files: ```human.bed```, ```human.bim```, and ```human.fam```. These file formats are PLINK binary files.
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
@@ -68,7 +75,7 @@ One powerful function of PLINK is converting data to formats used in other softw
 - _Have a look at the message in the terminal. How many variants are loaded from the BIM file? How many males and females sample were loaded?_
 - _Do you find the output file, ```human.vcf```?_
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
@@ -79,25 +86,25 @@ Try to filter the dataset by the following steps and write down the number of ma
 
 **Minor allele frequency (0.1)**
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
 **Individual genotyping rate (0.05 missingness)**
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
 **SNP genotyping rate (0.05 missingness)**
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
 **Hardy-Weinberg _P_ (0.001)**
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
@@ -109,7 +116,7 @@ After doing all steps,
 Perform all steps from the raw data in one run by PLINK. 
 - _Does the number of remaining markers and samples differ from the step-by-step result? Why?_
 
-```bash
+```{bash}
 plink --bfile human --maf 0.01 --mind 0.05 --geno 0.05 --hwe 0.001 --make-bed --out human_all
 ```
 
@@ -128,25 +135,25 @@ Try to filter your dataset by the following instructions and write down the numb
 
 #### Minor allele frequency (0.1)
 
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 #### Include only bi-allelic sites
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 **SNP genotype rate (0.05 missingness)**
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
 **Hardy-Weinberg P (0.001)**
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
 **Perform all QC steps in one run and compare the result with the step-wise method.**
-```bash
+```{bash}
 ### YOUR CODE HERE ###
 ```
 
@@ -156,7 +163,7 @@ Try to filter your dataset by the following instructions and write down the numb
 ```read_plink()``` function in the ```genio``` package is a powerful tool to read PLINK binary files.
 Use the PLINK binary files that passed all the QC-steps in one run in the previous section.
 
-```R
+```{r}
 library(genio)
 ### YOUR CODE HERE ###
 ```
@@ -166,7 +173,7 @@ Calculate genotype (0: A1A1, 1: A1A2, 2: A2A2) frequencies of each loci
 - Generate an empty data frame (allele_frequency) with three columns (A1A1, A1A2, A2A2).   
 - Number of rows = number of markers.  
 
-```R
+```{r}
 
 ### YOUR CODE HERE ###
 
@@ -174,18 +181,18 @@ Calculate genotype (0: A1A1, 1: A1A2, 2: A2A2) frequencies of each loci
 
 #### Use a for loop to count the number of genotypes in each marker and divide by the number of samples.
 
-```R
+```{r}
 ### YOUR CODE HERE ###
 ```
 
 #### Bind the frequency table with the marker information (HINT: ```cbind()``` function can bind two data-frames)
 
-```R
+```{r}
 ### YOUR CODE HERE ###
 ```
 #### Make a plot with your frequency data using the following script:
 
-```R
+```{r}
 library(tidyverse)
 
 # prepare plotting data
