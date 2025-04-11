@@ -22,6 +22,8 @@ We recommend you to work on the server today. For the first part of this practic
 both are software built to handle variant data. [Vcftools](https://vcftools.github.io/) is a tool built to handle ```.vcf``` files.
 [PLINK](https://www.cog-genomics.org/plink/1.9/general_usage) is another very common and extensive tool that uses it's own data format
 
+You can download this sheet as a .Rmd file [here 💾](https://raw.githubusercontent.com/troe27/UU-GWAS02/refs/heads/main/worksheet.Rmd).
+
 
 ## Dataset
 Copy the dataset to your working directory from ```/proj/g2020004/nobackup/tilman/gwas02/human.tar.gz``` on Rackham.
