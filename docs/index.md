@@ -20,7 +20,7 @@
 
 We recommend you to work on the server today. For the first part of this practice, you will need to run PLINK and vcftools.
 both are software built to handle variant data. [Vcftools](https://vcftools.github.io/) is a tool built to handle ```.vcf``` files.
-[PLINK](https://www.cog-genomics.org/plink/1.9/general_usage) is another very common and extensive tool that uses it's own data format
+[PLINK](https://www.cog-genomics.org/plink/1.9/general_usage) is another very common and extensive tool that uses it's own data format.
 
 You can download this sheet as a .Rmd file [here 💾](https://raw.githubusercontent.com/troe27/UU-GWAS02/refs/heads/main/worksheet.Rmd).
 
@@ -79,7 +79,7 @@ One powerful function of PLINK is converting data to formats used in other softw
 
 Try to filter the dataset by the following steps and write down the number of markers and samples passed in each step. (Note: output name needs to be changed in each run)
 
-**Minor allele frequency (0.1)**
+**Minor allele frequency (0.01)**
 
 ```bash
 ### YOUR CODE HERE ###
@@ -128,7 +128,7 @@ Use the human.vcf.gz you generated in the previous section.
 ### Try QC options
 Try to filter your dataset by the following instructions and write down the number of remaining markers and samples after filtering.
 
-#### Minor allele frequency (0.1)
+#### Minor allele frequency (0.01)
 
 ```bash
 ### YOUR CODE HERE ###

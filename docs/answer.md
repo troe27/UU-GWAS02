@@ -77,7 +77,7 @@ plink --bfile human --recode vcf bgz --out human
 
 Try to filter the dataset by the following steps and write down the number of markers and samples passed in each step. (Note: output name needs to be changed in each run)
 
-**Minor allele frequency (0.1)**
+**Minor allele frequency (0.01)**
 
 ```bash
 plink --bfile human --maf 0.01 --make-bed --out human_maf
@@ -127,7 +127,7 @@ Use the human.vcf.gz you generated in the previous section.
 ### Try QC options
 Try to filter your dataset by the following instructions and write down the number of remaining markers and samples after filtering.
 
-#### Minor allele frequency (0.1)
+#### Minor allele frequency (0.01)
 
 ```bash
 vcftools --gzvcf human.vcf.gz --maf 0.01 --recode --stdout | gzip -c > human_maf.vcf.gz
